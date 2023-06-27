@@ -1,0 +1,32 @@
+﻿Methods kept in Functions.java
+* getCurrentImage()
+   * Kept this method in Functions because it does not inherently belong to any single class and is used in methods in several different classes
+* getNumFromRange()
+   * Kept this method in Functions because its parameters indicate that it does not belong to any specific class; therefore, it is general enough to remain in Functions
+* updateOnTime()
+   * Kept this method in Functions because a method (draw()) in the VirtualWorld class cannot call updateOnTime() from a static context, meaning this method would have to stay in the Functions class
+* setAlpha()
+   * Kept this method in Functions because its parameters indicate that it does not belong to any specific class; therefore, it is general enough to remain in Functions
+* load()
+   * Kept this method in Functions because its function indicates that it does not belong to any specific class since it is mainly used to catch any invalid entries; therefore, it is general enough to remain in Functions
+* processLine()
+   * Kept this method in Functions because it is involved with the parse methods, which also do not inherently belong to any specific class; therefore, it makes sense to keep this method in the same class as the parse methods
+* All parse methods
+   * Kept all the parse methods in Functions because they do not inherently belong to a specific class and are involved with multiple classes, so it is easiest to leave them in Functions
+* distanceSquared()
+   * Kept this method in Functions because, although it could have been moved to the Point class, both of its parameters are also Points, so there is no use moving the method from Functions
+* All create methods
+   * Kept all the create methods in Functions because their parameters indicate that they do not inherently belong to any specific class, so it makes sense to leave them in Functions
+
+
+Ambiguous methods moved from Functions.java
+* adjacent()
+   * Moved this method from Functions to Entity because only the moveTo…() methods requires it, so it makes sense to implement them in the same class
+* shift()
+   * Moved this method from Functions to Viewport because its parameters related to the instance variables in the Viewport class
+* contains()
+   * Moved this method from Functions to Viewport because its parameters related to the instance variables in the Viewport class
+* tryAddEntity()
+   * Moved this method from Functions to WorldModel because the main method it implements (isOccupied()) belongs to the WorldModel class, so it makes sense to implement these methods in the same class
+* clamp()
+   * Moved this method from Functions to WorldView because only the shiftView() method requires it, so it makes sense to implement them in the same class
